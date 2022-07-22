@@ -36,6 +36,9 @@ class Square(Rectangle):
     def __init__(self, width):
         Rectangle.__init__(self, width, width)
 
+    def __str__(self):
+        return f"Square(side={self.width})"
+
     def set_side(self, length):
         self.width = length
         self.height = length
@@ -47,23 +50,3 @@ class Square(Rectangle):
     def set_height(self, height):
         self.width = height
         self.height = height
-
-    def __str__(self):
-        return f"Square(side={self.width})"
-
-
-rect = Rectangle(5, 10)
-print(rect.get_area())
-rect.set_width(10)
-print(rect.get_perimeter())
-print(rect.get_diagonal())
-print(rect.get_picture())
-print(rect)
-
-sq = Square(9)
-print(sq.get_area())
-sq.set_side(4)
-print(sq.get_diagonal())
-print(sq)
-
-# class Square:
